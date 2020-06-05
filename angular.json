@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
+              "./semantic/dist/semantic.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./semantic/dist/semantic.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -89,9 +92,12 @@
               "src/assets"
             ],
             "styles": [
+              "./semantic/dist/semantic.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./semantic/dist/semantic.min.js"
+            ]
           }
         },
         "lint": {
