@@ -1,0 +1,43 @@
+<div class="ui content">
+  <div class="ui center basic segment">
+
+    <div class="ui horizontal divider">
+      <h1 id="aboutMe">My Messages</h1>
+    </div>
+
+    <div class="ui divided list" *ngFor="let message of messageList$ | async">
+
+      <div [ngClass]="message.read ? 'ui blue float message' : 'ui green float message'">
+        <div class="ui two row grid">
+          <div class="row">
+            <div class="close icon">
+              <button class="ui button" (click)="toggleRead(message)">
+                <i [ngClass]="message.read ? 'left float blue envelope open icon' : 'left float green envelope icon'"></i>
+                {{ message.read ? 'Mark as unread' : 'Mark as read' }}
+              </button>
+              <button class="ui button" (click)="deleteMessage(message)">
+                <i class="minus circle red icon"></i>
+                Delete Message
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="header">
+              <p>
+                Name: {{ message.name }} <br>
+                Date: {{ message.date.toDate() | date:'yyyy-MM-dd' }} <br>
+                Contact Number: {{ message.contactNumber }} <br>
+                Email: {{ message.email }} <br>
+                Message: {{ message.message }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

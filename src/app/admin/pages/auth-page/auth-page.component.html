@@ -1,0 +1,18 @@
+<div class="ui form segment">
+  <form class="ui form" [formGroup]="login" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label>
+        Username:
+        <input type="email" formControlName="username">
+      </label>
+    </div>
+
+    <div class="field">
+      <label>
+        Password:
+        <input type="password" formControlName="password">
+      </label>
+    </div>
+    <button class="ui primary button" type="submit">Login</button>
+  </form>
+</div>
