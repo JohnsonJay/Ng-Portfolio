@@ -11,7 +11,10 @@ import {Observable} from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  downloadLink = 'https://firebasestorage.googleapis.com/v0/b/jayportfolio-e6a1e.appspot.com/o/Resume.pdf?alt=media&token=1ad84b49-16e6-4c85-bd1a-f52736cda79b';
+  resumeDownloadLink = '#'; // Add download link here
+  githubLink = '#'; // Add github link here
+  twitterlink = '#'; // Add twitter link here
+  linkedinLink = '#'; // You guessed it!! LinkedIn link here
 
   messagesCount$: Observable<any>;
 
