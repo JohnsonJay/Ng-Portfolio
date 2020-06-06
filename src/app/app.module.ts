@@ -10,6 +10,7 @@ import { ProjectsListComponent } from './components/projects-list/projects-list.
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { ToolsListComponent } from './components/tools-list/tools-list.component';
 import { PortfolioPageComponent } from './pages/portfolio-page/portfolio-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PortfolioPageComponent } from './pages/portfolio-page/portfolio-page.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
