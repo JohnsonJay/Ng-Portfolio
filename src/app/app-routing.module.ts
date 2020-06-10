@@ -6,7 +6,7 @@ import { PortfolioPageComponent } from '../app/pages/portfolio-page/portfolio-pa
 const routes: Routes = [
   { path: '', component: PortfolioPageComponent },
   { path: 'home', component: PortfolioPageComponent },
-  { path: 'auth',  loadChildren: './admin/admin.module#AdminModule' },
+  { path: 'auth', loadChildren: './admin/admin.module#AdminModule' },
   { path: '**', component: PortfolioPageComponent }
 ];
 
