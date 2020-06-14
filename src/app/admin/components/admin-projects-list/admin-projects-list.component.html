@@ -1,0 +1,34 @@
+<div class="ui container">
+  <div class="ui horizontal divider">
+    <h1>Projects That I've worked on</h1>
+  </div>
+  <button class="ui labeled icon button green" (click)="showModal()">
+    <i class="add icon"></i>
+    Add a new project
+  </button>
+  <div class="ui list" *ngFor="let project of $projects | async">
+    <div class="item">
+      <img class="ui avatar image" src="{{ project.projectIconUrl }}">
+      <div class="content">
+        <a class="header">{{ project.projectName }}</a>
+        <div class="description">{{ project.projectUrl }}</div>
+      </div>
+      <div class="right floated content">
+        <div class="ui buttons">
+          <button class="ui primary button" (click)="editModal(project)">Edit</button>
+          <div class="or"></div>
+          <button class="ui negative button" (click)="removeProject(project.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-modal
+    *ngIf="this.formModalContent.isVisible"
+    (close)="this.formModalContent.isVisible = null"
+    [formModalInputs]="formModalContent"
+    (submit)="addProject($event)"
+    (edit)="editProject($event)"
+  ></app-modal>
+
+</div>

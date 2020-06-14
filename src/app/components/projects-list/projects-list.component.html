@@ -1,0 +1,16 @@
+<div class="ui container">
+  <div class="ui horizontal divider">
+    <h1 id="projects">Projects</h1>
+  </div>
+
+  <div class="ui center aligned">
+    <div class="ui large horizontal divided list">
+      <div class="item" *ngFor="let project of $projects | async">
+        <img class="ui avatar image" src="{{ project.projectIconUrl }}">
+        <div class="content">
+          <a class="header" href="{{ project.projectUrl }}">{{ project.projectName }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

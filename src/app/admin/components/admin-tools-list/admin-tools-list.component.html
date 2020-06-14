@@ -1,0 +1,35 @@
+<div class="ui container">
+  <div class="ui horizontal divider">
+    <h1>Tools that I am familiar with</h1>
+  </div>
+
+  <button class="ui labeled icon button green" (click)="showModal()">
+    <i class="add icon"></i>
+    Add a new tool
+  </button>
+
+  <div class="ui list" *ngFor="let tool of $tools | async">
+    <div class="item">
+      <img class="ui avatar image" src="{{ tool.toolImgUrl }}">
+      <div class="content">
+        <a class="header">{{ tool.toolName }}</a>
+      </div>
+      <div class="right floated content">
+        <div class="ui buttons">
+          <button class="ui primary button" (click)="editModal(tool)">Edit</button>
+          <div class="or"></div>
+          <button class="ui negative button" (click)="removeTool(tool.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-modal
+    *ngIf="this.formModalContent.isVisible"
+    (close)="this.formModalContent.isVisible = null"
+    [formModalInputs]="formModalContent"
+    (submit)="addTool($event)"
+    (edit)="editTool($event)"
+  ></app-modal>
+
+</div>

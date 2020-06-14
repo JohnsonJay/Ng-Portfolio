@@ -1,0 +1,50 @@
+<div class="ui menu">
+  <a class="ui item" routerLink="/auth/admin">
+    <div class="ui icon" data-tooltip="Home" data-position="bottom left">
+      <i class="home blue icon" style="color: black"></i>
+    </div>
+  </a>
+
+  <a class="ui item">
+    <div class="ui icon" data-tooltip="Logout" data-position="bottom left">
+      <i class="power red icon" (click)="logout()"></i>
+    </div>
+  </a>
+
+  <div class="ui item">
+    <div class="ui labeled button" tabindex="0" routerLink="/auth/messages">
+      <div class="ui icon green button" data-tooltip="View Messages" data-position="bottom left">
+        <i class="conversation icon"></i>
+      </div>
+      <a class="ui basic green left pointing label" *ngIf="messagesCount$ | async as messageCount">
+        {{ messageCount.length }}
+      </a>
+    </div>
+  </div>
+
+  <div class="right menu">
+    <a class="ui item" [href]="resumeDownloadLink">
+      <div class="ui icon" data-tooltip="Download CV" data-position="bottom left">
+        <i class="download icon"></i>
+      </div>
+    </a>
+
+    <a class="ui item" [href]="linkedinLink">
+      <div class="ui icon" data-tooltip="View LinkedIn Page" data-position="bottom center">
+        <i class="linkedin in icon" style="color: #0073af"></i>
+      </div>
+    </a>
+
+    <a class="ui item" [href]="githubLink">
+      <div class="ui icon" data-tooltip="View GitHub Page" data-position="bottom center">
+        <i class="github icon" style="color: black"></i>
+      </div>
+    </a>
+
+    <a class="ui item" [href]="twitterlink" style="color: #01a7e5">
+      <div class="ui icon" data-tooltip="View Twitter Page" data-position="left center">
+        <i class="twitter icon"></i>
+      </div>
+    </a>
+  </div>
+</div>
