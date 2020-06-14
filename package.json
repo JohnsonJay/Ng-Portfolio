@@ -20,10 +20,10 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
+    "firebase": "^7.15.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1",
-    "firebase": ">= 5.5.7 <8"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.24",
@@ -50,5 +50,8 @@
     "fuzzy": "^0.1.3",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.5.5"
   }
 }

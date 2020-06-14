@@ -25,9 +25,6 @@ export class AuthPageComponent implements OnInit {
   }
 
   public onSubmit() {
-    // TODO run login logic here
-    // TODO redirect to my portfolio page if unsuccessful
-    // TODO redirect to admin page if successful.
     const userDetails = this.login.value;
     const isAuthenticated = this.authService.login(userDetails.username, userDetails.password);
 
